@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController,ModalController } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the EventDetailsPage page.
@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams, AlertController,ModalController } 
 })
 export class EventDetailsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private AlertCtrl: AlertController, modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private AlertCtrl: AlertController) {
   }
   
 
@@ -24,10 +24,11 @@ export class EventDetailsPage {
   }
 
  doAlert(){
-    let alert = this.alertCtrl.create({
-    title: 'Low battery',
-    subTitle: '10% of battery remaining',
-    buttons: ['Dismiss']
+   var certificado = "Certificado";
+    let alert = this.AlertCtrl.create({
+    title: certificado,
+    subTitle: 'Foi enviado para o seu e-mail o certificado de participação',
+    buttons: ['OK']
   });
   alert.present();
  }

@@ -16723,7 +16723,7 @@ function Ion_tsickle_Closure_declarations() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nav_util__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nav_util__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nav_params__ = __webpack_require__(15);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewController; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = isViewController;
@@ -17422,7 +17422,7 @@ var /** @type {?} */ DEFAULT_CSS_CLASS = 'ion-page';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_constants__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_config__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_nav_util__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_nav_util__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_controller__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transitions_transition_ios__ = __webpack_require__(233);
@@ -26352,7 +26352,7 @@ ReactiveFormsModule.ctorParameters = function () { return []; };
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nav_util__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nav_util__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__view_controller__ = __webpack_require__(5);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeepLinker; });
@@ -27635,7 +27635,7 @@ var IonicFormInput = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__platform_dom_controller__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ion__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__navigation_nav_util__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__navigation_nav_util__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__platform_keyboard__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navigation_nav_controller__ = __webpack_require__(19);
@@ -29472,285 +29472,6 @@ function NavController_tsickle_Closure_declarations() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pointer_events__ = __webpack_require__(174);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UIEventManager; });
-
-/**
- * @hidden
- */
-var UIEventManager = (function () {
-    /**
-     * @param {?} plt
-     */
-    function UIEventManager(plt) {
-        this.plt = plt;
-        this.evts = [];
-    }
-    /**
-     * @param {?} config
-     * @return {?}
-     */
-    UIEventManager.prototype.pointerEvents = function (config) {
-        if (!config.element || !config.pointerDown) {
-            console.error('PointerEvents config is invalid');
-            return;
-        }
-        var /** @type {?} */ eventListnerOpts = {
-            capture: config.capture,
-            passive: config.passive,
-            zone: config.zone
-        };
-        var /** @type {?} */ pointerEvents = new __WEBPACK_IMPORTED_MODULE_0__pointer_events__["a" /* PointerEvents */](this.plt, config.element, config.pointerDown, config.pointerMove, config.pointerUp, eventListnerOpts);
-        var /** @type {?} */ removeFunc = function () { return pointerEvents.destroy(); };
-        this.evts.push(removeFunc);
-        return pointerEvents;
-    };
-    /**
-     * @param {?} ele
-     * @param {?} eventName
-     * @param {?} callback
-     * @param {?} opts
-     * @return {?}
-     */
-    UIEventManager.prototype.listen = function (ele, eventName, callback, opts) {
-        if (ele) {
-            var /** @type {?} */ removeFunc = this.plt.registerListener(ele, eventName, callback, opts);
-            this.evts.push(removeFunc);
-            return removeFunc;
-        }
-    };
-    /**
-     * @return {?}
-     */
-    UIEventManager.prototype.unlistenAll = function () {
-        this.evts.forEach(function (unRegEvent) {
-            unRegEvent();
-        });
-        this.evts.length = 0;
-    };
-    /**
-     * @return {?}
-     */
-    UIEventManager.prototype.destroy = function () {
-        this.unlistenAll();
-        this.evts = null;
-    };
-    return UIEventManager;
-}());
-
-function UIEventManager_tsickle_Closure_declarations() {
-    /** @type {?} */
-    UIEventManager.prototype.evts;
-    /** @type {?} */
-    UIEventManager.prototype.plt;
-}
-//# sourceMappingURL=ui-event-manager.js.map
-
-/***/ }),
-/* 21 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__view_controller__ = __webpack_require__(5);
-/* harmony export (immutable) */ __webpack_exports__["d"] = getComponent;
-/* unused harmony export convertToView */
-/* harmony export (immutable) */ __webpack_exports__["e"] = convertToViews;
-/* harmony export (immutable) */ __webpack_exports__["j"] = setZIndex;
-/* harmony export (immutable) */ __webpack_exports__["l"] = isTabs;
-/* harmony export (immutable) */ __webpack_exports__["n"] = isTab;
-/* harmony export (immutable) */ __webpack_exports__["m"] = isNav;
-/* unused harmony export DeepLinkMetadata */
-/* unused harmony export DeepLinkMetadataFactory */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return STATE_NEW; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return STATE_INITIALIZED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return STATE_ATTACHED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return STATE_DESTROYED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return INIT_ZINDEX; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return DIRECTION_BACK; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return DIRECTION_FORWARD; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return DIRECTION_SWITCH; });
-
-
-/**
- * @param {?} linker
- * @param {?} nameOrPageOrView
- * @param {?=} params
- * @return {?}
- */
-function getComponent(linker, nameOrPageOrView, params) {
-    if (typeof nameOrPageOrView === 'function') {
-        return Promise.resolve(new __WEBPACK_IMPORTED_MODULE_1__view_controller__["a" /* ViewController */](nameOrPageOrView, params));
-    }
-    if (typeof nameOrPageOrView === 'string') {
-        return linker.getComponentFromName(nameOrPageOrView).then(function (component) {
-            return new __WEBPACK_IMPORTED_MODULE_1__view_controller__["a" /* ViewController */](component, params);
-        });
-    }
-    return Promise.resolve(null);
-}
-/**
- * @param {?} linker
- * @param {?} nameOrPageOrView
- * @param {?} params
- * @return {?}
- */
-function convertToView(linker, nameOrPageOrView, params) {
-    if (nameOrPageOrView) {
-        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__view_controller__["b" /* isViewController */])(nameOrPageOrView)) {
-            // is already a ViewController
-            return Promise.resolve(/** @type {?} */ (nameOrPageOrView));
-        }
-        return getComponent(linker, nameOrPageOrView, params);
-    }
-    return Promise.resolve(null);
-}
-/**
- * @param {?} linker
- * @param {?} pages
- * @return {?}
- */
-function convertToViews(linker, pages) {
-    var /** @type {?} */ views = [];
-    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util_util__["d" /* isArray */])(pages)) {
-        for (var /** @type {?} */ i = 0; i < pages.length; i++) {
-            var /** @type {?} */ page = pages[i];
-            if (page) {
-                if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__view_controller__["b" /* isViewController */])(page)) {
-                    views.push(page);
-                }
-                else if (page.page) {
-                    views.push(convertToView(linker, page.page, page.params));
-                }
-                else {
-                    views.push(convertToView(linker, page, null));
-                }
-            }
-        }
-    }
-    return Promise.all(views);
-}
-var /** @type {?} */ portalZindex = 9999;
-/**
- * @param {?} nav
- * @param {?} enteringView
- * @param {?} leavingView
- * @param {?} direction
- * @param {?} renderer
- * @return {?}
- */
-function setZIndex(nav, enteringView, leavingView, direction, renderer) {
-    if (enteringView) {
-        if (nav._isPortal) {
-            if (direction === DIRECTION_FORWARD) {
-                enteringView._setZIndex(nav._zIndexOffset + portalZindex, renderer);
-            }
-            portalZindex++;
-            return;
-        }
-        leavingView = leavingView || nav.getPrevious(enteringView);
-        if (leavingView && __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util_util__["c" /* isPresent */])(leavingView._zIndex)) {
-            if (direction === DIRECTION_BACK) {
-                enteringView._setZIndex(leavingView._zIndex - 1, renderer);
-            }
-            else {
-                enteringView._setZIndex(leavingView._zIndex + 1, renderer);
-            }
-        }
-        else {
-            enteringView._setZIndex(INIT_ZINDEX + nav._zIndexOffset, renderer);
-        }
-    }
-}
-/**
- * @param {?} nav
- * @return {?}
- */
-function isTabs(nav) {
-    // Tabs (ion-tabs)
-    return !!nav && !!nav.getSelected;
-}
-/**
- * @param {?} nav
- * @return {?}
- */
-function isTab(nav) {
-    // Tab (ion-tab)
-    return !!nav && __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util_util__["c" /* isPresent */])(nav._tabId);
-}
-/**
- * @param {?} nav
- * @return {?}
- */
-function isNav(nav) {
-    // Nav (ion-nav), Tab (ion-tab), Portal (ion-portal)
-    return !!nav && !!nav.push;
-}
-/**
- * @hidden
- */
-var DeepLinkMetadata = (function () {
-    function DeepLinkMetadata() {
-    }
-    return DeepLinkMetadata;
-}());
-
-function DeepLinkMetadata_tsickle_Closure_declarations() {
-    /** @type {?} */
-    DeepLinkMetadata.prototype.component;
-    /** @type {?} */
-    DeepLinkMetadata.prototype.loadChildren;
-    /** @type {?} */
-    DeepLinkMetadata.prototype.name;
-    /** @type {?} */
-    DeepLinkMetadata.prototype.segment;
-    /** @type {?} */
-    DeepLinkMetadata.prototype.defaultHistory;
-    /** @type {?} */
-    DeepLinkMetadata.prototype.priority;
-}
-/**
- * @hidden
- */
-var DeepLinkMetadataFactory;
-var /** @type {?} */ STATE_NEW = 1;
-var /** @type {?} */ STATE_INITIALIZED = 2;
-var /** @type {?} */ STATE_ATTACHED = 3;
-var /** @type {?} */ STATE_DESTROYED = 4;
-var /** @type {?} */ INIT_ZINDEX = 100;
-var /** @type {?} */ DIRECTION_BACK = 'back';
-var /** @type {?} */ DIRECTION_FORWARD = 'forward';
-var /** @type {?} */ DIRECTION_SWITCH = 'switch';
-//# sourceMappingURL=nav-util.js.map
-
-/***/ }),
-/* 22 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return KEY_LEFT; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return KEY_UP; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return KEY_RIGHT; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return KEY_DOWN; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return KEY_ENTER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return KEY_ESCAPE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KEY_SPACE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return KEY_TAB; });
-var /** @type {?} */ KEY_LEFT = 37;
-var /** @type {?} */ KEY_UP = 38;
-var /** @type {?} */ KEY_RIGHT = 39;
-var /** @type {?} */ KEY_DOWN = 40;
-var /** @type {?} */ KEY_ENTER = 13;
-var /** @type {?} */ KEY_ESCAPE = 27;
-var /** @type {?} */ KEY_SPACE = 32;
-var /** @type {?} */ KEY_TAB = 9;
-//# sourceMappingURL=key.js.map
-
-/***/ }),
-/* 23 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_app_app_root__ = __webpack_require__(52);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__components_app_app_root__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_app_menu_controller__ = __webpack_require__(24);
@@ -29858,7 +29579,7 @@ var /** @type {?} */ KEY_TAB = 9;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_modal_modal_component__ = __webpack_require__(65);
 /* unused harmony reexport ModalCmp */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_modal_modal_controller__ = __webpack_require__(138);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_53__components_modal_modal_controller__["a"]; });
+/* unused harmony reexport ModalController */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_nav_nav__ = __webpack_require__(68);
 /* unused harmony reexport Nav */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_nav_nav_pop__ = __webpack_require__(66);
@@ -29977,7 +29698,7 @@ var /** @type {?} */ KEY_TAB = 9;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_110__platform_dom_controller__ = __webpack_require__(8);
 /* unused harmony reexport DomController */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_111__platform_platform__ = __webpack_require__(3);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_111__platform_platform__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_111__platform_platform__["a"]; });
 /* unused harmony reexport setupPlatform */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_112__tap_click_haptic__ = __webpack_require__(36);
 /* unused harmony reexport Haptic */
@@ -29991,7 +29712,7 @@ var /** @type {?} */ KEY_TAB = 9;
 /* unused harmony reexport NavControllerBase */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_117__navigation_nav_params__ = __webpack_require__(15);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_117__navigation_nav_params__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_118__navigation_nav_util__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_118__navigation_nav_util__ = __webpack_require__(22);
 /* unused harmony reexport DeepLinkMetadata */
 /* unused harmony reexport DeepLinkMetadataFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_119__tap_click_tap_click__ = __webpack_require__(182);
@@ -30198,6 +29919,285 @@ var /** @type {?} */ KEY_TAB = 9;
 
 
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pointer_events__ = __webpack_require__(174);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UIEventManager; });
+
+/**
+ * @hidden
+ */
+var UIEventManager = (function () {
+    /**
+     * @param {?} plt
+     */
+    function UIEventManager(plt) {
+        this.plt = plt;
+        this.evts = [];
+    }
+    /**
+     * @param {?} config
+     * @return {?}
+     */
+    UIEventManager.prototype.pointerEvents = function (config) {
+        if (!config.element || !config.pointerDown) {
+            console.error('PointerEvents config is invalid');
+            return;
+        }
+        var /** @type {?} */ eventListnerOpts = {
+            capture: config.capture,
+            passive: config.passive,
+            zone: config.zone
+        };
+        var /** @type {?} */ pointerEvents = new __WEBPACK_IMPORTED_MODULE_0__pointer_events__["a" /* PointerEvents */](this.plt, config.element, config.pointerDown, config.pointerMove, config.pointerUp, eventListnerOpts);
+        var /** @type {?} */ removeFunc = function () { return pointerEvents.destroy(); };
+        this.evts.push(removeFunc);
+        return pointerEvents;
+    };
+    /**
+     * @param {?} ele
+     * @param {?} eventName
+     * @param {?} callback
+     * @param {?} opts
+     * @return {?}
+     */
+    UIEventManager.prototype.listen = function (ele, eventName, callback, opts) {
+        if (ele) {
+            var /** @type {?} */ removeFunc = this.plt.registerListener(ele, eventName, callback, opts);
+            this.evts.push(removeFunc);
+            return removeFunc;
+        }
+    };
+    /**
+     * @return {?}
+     */
+    UIEventManager.prototype.unlistenAll = function () {
+        this.evts.forEach(function (unRegEvent) {
+            unRegEvent();
+        });
+        this.evts.length = 0;
+    };
+    /**
+     * @return {?}
+     */
+    UIEventManager.prototype.destroy = function () {
+        this.unlistenAll();
+        this.evts = null;
+    };
+    return UIEventManager;
+}());
+
+function UIEventManager_tsickle_Closure_declarations() {
+    /** @type {?} */
+    UIEventManager.prototype.evts;
+    /** @type {?} */
+    UIEventManager.prototype.plt;
+}
+//# sourceMappingURL=ui-event-manager.js.map
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_util__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__view_controller__ = __webpack_require__(5);
+/* harmony export (immutable) */ __webpack_exports__["d"] = getComponent;
+/* unused harmony export convertToView */
+/* harmony export (immutable) */ __webpack_exports__["e"] = convertToViews;
+/* harmony export (immutable) */ __webpack_exports__["j"] = setZIndex;
+/* harmony export (immutable) */ __webpack_exports__["l"] = isTabs;
+/* harmony export (immutable) */ __webpack_exports__["n"] = isTab;
+/* harmony export (immutable) */ __webpack_exports__["m"] = isNav;
+/* unused harmony export DeepLinkMetadata */
+/* unused harmony export DeepLinkMetadataFactory */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return STATE_NEW; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return STATE_INITIALIZED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return STATE_ATTACHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return STATE_DESTROYED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return INIT_ZINDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return DIRECTION_BACK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return DIRECTION_FORWARD; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return DIRECTION_SWITCH; });
+
+
+/**
+ * @param {?} linker
+ * @param {?} nameOrPageOrView
+ * @param {?=} params
+ * @return {?}
+ */
+function getComponent(linker, nameOrPageOrView, params) {
+    if (typeof nameOrPageOrView === 'function') {
+        return Promise.resolve(new __WEBPACK_IMPORTED_MODULE_1__view_controller__["a" /* ViewController */](nameOrPageOrView, params));
+    }
+    if (typeof nameOrPageOrView === 'string') {
+        return linker.getComponentFromName(nameOrPageOrView).then(function (component) {
+            return new __WEBPACK_IMPORTED_MODULE_1__view_controller__["a" /* ViewController */](component, params);
+        });
+    }
+    return Promise.resolve(null);
+}
+/**
+ * @param {?} linker
+ * @param {?} nameOrPageOrView
+ * @param {?} params
+ * @return {?}
+ */
+function convertToView(linker, nameOrPageOrView, params) {
+    if (nameOrPageOrView) {
+        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__view_controller__["b" /* isViewController */])(nameOrPageOrView)) {
+            // is already a ViewController
+            return Promise.resolve(/** @type {?} */ (nameOrPageOrView));
+        }
+        return getComponent(linker, nameOrPageOrView, params);
+    }
+    return Promise.resolve(null);
+}
+/**
+ * @param {?} linker
+ * @param {?} pages
+ * @return {?}
+ */
+function convertToViews(linker, pages) {
+    var /** @type {?} */ views = [];
+    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util_util__["d" /* isArray */])(pages)) {
+        for (var /** @type {?} */ i = 0; i < pages.length; i++) {
+            var /** @type {?} */ page = pages[i];
+            if (page) {
+                if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__view_controller__["b" /* isViewController */])(page)) {
+                    views.push(page);
+                }
+                else if (page.page) {
+                    views.push(convertToView(linker, page.page, page.params));
+                }
+                else {
+                    views.push(convertToView(linker, page, null));
+                }
+            }
+        }
+    }
+    return Promise.all(views);
+}
+var /** @type {?} */ portalZindex = 9999;
+/**
+ * @param {?} nav
+ * @param {?} enteringView
+ * @param {?} leavingView
+ * @param {?} direction
+ * @param {?} renderer
+ * @return {?}
+ */
+function setZIndex(nav, enteringView, leavingView, direction, renderer) {
+    if (enteringView) {
+        if (nav._isPortal) {
+            if (direction === DIRECTION_FORWARD) {
+                enteringView._setZIndex(nav._zIndexOffset + portalZindex, renderer);
+            }
+            portalZindex++;
+            return;
+        }
+        leavingView = leavingView || nav.getPrevious(enteringView);
+        if (leavingView && __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util_util__["c" /* isPresent */])(leavingView._zIndex)) {
+            if (direction === DIRECTION_BACK) {
+                enteringView._setZIndex(leavingView._zIndex - 1, renderer);
+            }
+            else {
+                enteringView._setZIndex(leavingView._zIndex + 1, renderer);
+            }
+        }
+        else {
+            enteringView._setZIndex(INIT_ZINDEX + nav._zIndexOffset, renderer);
+        }
+    }
+}
+/**
+ * @param {?} nav
+ * @return {?}
+ */
+function isTabs(nav) {
+    // Tabs (ion-tabs)
+    return !!nav && !!nav.getSelected;
+}
+/**
+ * @param {?} nav
+ * @return {?}
+ */
+function isTab(nav) {
+    // Tab (ion-tab)
+    return !!nav && __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util_util__["c" /* isPresent */])(nav._tabId);
+}
+/**
+ * @param {?} nav
+ * @return {?}
+ */
+function isNav(nav) {
+    // Nav (ion-nav), Tab (ion-tab), Portal (ion-portal)
+    return !!nav && !!nav.push;
+}
+/**
+ * @hidden
+ */
+var DeepLinkMetadata = (function () {
+    function DeepLinkMetadata() {
+    }
+    return DeepLinkMetadata;
+}());
+
+function DeepLinkMetadata_tsickle_Closure_declarations() {
+    /** @type {?} */
+    DeepLinkMetadata.prototype.component;
+    /** @type {?} */
+    DeepLinkMetadata.prototype.loadChildren;
+    /** @type {?} */
+    DeepLinkMetadata.prototype.name;
+    /** @type {?} */
+    DeepLinkMetadata.prototype.segment;
+    /** @type {?} */
+    DeepLinkMetadata.prototype.defaultHistory;
+    /** @type {?} */
+    DeepLinkMetadata.prototype.priority;
+}
+/**
+ * @hidden
+ */
+var DeepLinkMetadataFactory;
+var /** @type {?} */ STATE_NEW = 1;
+var /** @type {?} */ STATE_INITIALIZED = 2;
+var /** @type {?} */ STATE_ATTACHED = 3;
+var /** @type {?} */ STATE_DESTROYED = 4;
+var /** @type {?} */ INIT_ZINDEX = 100;
+var /** @type {?} */ DIRECTION_BACK = 'back';
+var /** @type {?} */ DIRECTION_FORWARD = 'forward';
+var /** @type {?} */ DIRECTION_SWITCH = 'switch';
+//# sourceMappingURL=nav-util.js.map
+
+/***/ }),
+/* 23 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return KEY_LEFT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return KEY_UP; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return KEY_RIGHT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return KEY_DOWN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return KEY_ENTER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return KEY_ESCAPE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KEY_SPACE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return KEY_TAB; });
+var /** @type {?} */ KEY_LEFT = 37;
+var /** @type {?} */ KEY_UP = 38;
+var /** @type {?} */ KEY_RIGHT = 39;
+var /** @type {?} */ KEY_DOWN = 40;
+var /** @type {?} */ KEY_ENTER = 13;
+var /** @type {?} */ KEY_ESCAPE = 27;
+var /** @type {?} */ KEY_SPACE = 32;
+var /** @type {?} */ KEY_TAB = 9;
+//# sourceMappingURL=key.js.map
 
 /***/ }),
 /* 24 */
@@ -30554,7 +30554,7 @@ var /** @type {?} */ menuTypes = {};
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dom_controller__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_dom__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__key__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__key__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__platform__ = __webpack_require__(3);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Keyboard; });
 
@@ -43116,7 +43116,7 @@ function Toolbar_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__recognizers__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_dom__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ui_event_manager__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ui_event_manager__ = __webpack_require__(21);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PanGesture; });
 
 
@@ -43359,7 +43359,7 @@ function PanGesture_tsickle_Closure_declarations() {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nav_util__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nav_util__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_controller__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ion__ = __webpack_require__(4);
@@ -44918,7 +44918,7 @@ var cordovaWarn = function (pluginName, method) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gestures_gesture_controller__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__platform_key__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__platform_key__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__navigation_nav_params__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigation_view_controller__ = __webpack_require__(5);
@@ -45273,7 +45273,7 @@ function ActionSheet_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_dom__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gestures_gesture_controller__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__platform_key__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__platform_key__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigation_nav_params__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navigation_view_controller__ = __webpack_require__(5);
@@ -48578,7 +48578,7 @@ var /** @type {?} */ loadingIds = -1;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__platform_key__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__platform_key__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__navigation_nav_params__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navigation_view_controller__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__gestures_gesture_controller__ = __webpack_require__(7);
@@ -49378,7 +49378,7 @@ function Option_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__picker_options__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_dom__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__gestures_ui_event_manager__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__gestures_ui_event_manager__ = __webpack_require__(21);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PickerColumnCmp; });
 
 
@@ -49869,7 +49869,7 @@ function PickerColumnCmp_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gestures_gesture_controller__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_key__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_key__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__navigation_nav_params__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__navigation_view_controller__ = __webpack_require__(5);
@@ -50224,7 +50224,7 @@ function PickerController_tsickle_Closure_declarations() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__platform_key__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__platform_key__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navigation_nav_params__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__navigation_view_controller__ = __webpack_require__(5);
@@ -50843,7 +50843,7 @@ var /** @type {?} */ radioGroupIds = -1;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_dom__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__gestures_ui_event_manager__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__gestures_ui_event_manager__ = __webpack_require__(21);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Refresher; });
 
 
@@ -54339,7 +54339,7 @@ function TabHighlight_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ion__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigation_nav_controller__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__navigation_nav_util__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__navigation_nav_util__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__split_pane_split_pane__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__tab_highlight__ = __webpack_require__(85);
@@ -55783,7 +55783,7 @@ exports.isFunction = isFunction;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateAccountPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55828,7 +55828,7 @@ CreateAccountPage = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventDetailsOutPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55873,7 +55873,7 @@ EventDetailsOutPage = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventDetailsPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55886,6 +55886,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Generated class for the EventDetailsPage page.
  *
@@ -55893,7 +55894,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var EventDetailsPage = (function () {
-    function EventDetailsPage(navCtrl, navParams, AlertCtrl, modalCtrl) {
+    function EventDetailsPage(navCtrl, navParams, AlertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.AlertCtrl = AlertCtrl;
@@ -55902,10 +55903,11 @@ var EventDetailsPage = (function () {
         console.log('ionViewDidLoad EventDetailsPage');
     };
     EventDetailsPage.prototype.doAlert = function () {
-        var alert = this.alertCtrl.create({
-            title: 'Low battery',
-            subTitle: '10% of battery remaining',
-            buttons: ['Dismiss']
+        var certificado = "Certificado";
+        var alert = this.AlertCtrl.create({
+            title: certificado,
+            subTitle: 'Foi enviado para o seu e-mail o certificado de participação',
+            buttons: ['OK']
         });
         alert.present();
     };
@@ -55916,10 +55918,10 @@ EventDetailsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-event-details',template:/*ion-inline-start:"/Users/rubenferreira/Desktop/Projects/biolivingMobile/src/pages/event-details/event-details.html"*/'<!--\n  Generated template for the EventDetailsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Detalhes</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n\n  \n<ion-list-header>\n      Descrição\n    </ion-list-header>\n    <ion-item text-wrap>\n      Agora que a Primavera fez florescer tantas plantas, venha conhecer a diversidade botânica da Pateira de Frossos, na companhia de uma botânica de renome. Qual o nome de cada planta? Quais se podem comer? Que propriedade medicinal têm? Deixe-se maravilhar pelo fascinante mundo das plantas.\n    </ion-item>\n      \n\n  \n   \n\n  <ion-list-header>\n      Colaboradores\n    </ion-list-header>\n     <ion-item>\n      <ion-avatar item-left>\n        <img src="assets/seuss.jpg" alt="">\n      </ion-avatar>\n      <h3>Dr. Rosa Pinho</h3>\n      <p>Biologa universidade de Aveiro</p>\n    </ion-item>\n\n     <ion-list-header>\n      Local\n    </ion-list-header>\n    <ion-item>\n      <h3>Pateira de Frossos</h3>\n    </ion-item>\n\n    <ion-list-header>\n      Data/Hora\n    </ion-list-header>\n      <ion-item>\n        <h3>Data:</h3><p>27-Maio-2017</p>\n        <h3>Hora:</h3><p>09:30 - 12:30</p>\n      </ion-item>\n\n    </ion-list>\n\n    <button ion-button class="greenBtn" outline block (click)="doAlert()" >Solicitar certificado de participação</button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/rubenferreira/Desktop/Projects/biolivingMobile/src/pages/event-details/event-details.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* AlertController */]) === "function" && _c || Object])
 ], EventDetailsPage);
 
-var _a, _b, _c, _d;
+var _a, _b, _c;
 //# sourceMappingURL=event-details.js.map
 
 /***/ }),
@@ -55930,7 +55932,7 @@ var _a, _b, _c, _d;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_details_out_event_details_out__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_details_event_details__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55998,7 +56000,7 @@ webpackEmptyContext.id = 102;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__events_events__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__create_account_create_account__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58946,7 +58948,7 @@ var /** @type {?} */ DEFAULT_FORMAT = 'MMM D, YYYY';
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__platform_platform__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gestures_ui_event_manager__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gestures_ui_event_manager__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fab__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fab_list__ = __webpack_require__(54);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FabContainer; });
@@ -63035,7 +63037,7 @@ function MenuToggle_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_menu_controller__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__nav_nav__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__platform_platform__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__gestures_ui_event_manager__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__gestures_ui_event_manager__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__split_pane_split_pane__ = __webpack_require__(34);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Menu; });
 
@@ -65020,7 +65022,7 @@ function RadioButton_tsickle_Closure_declarations() {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__platform_key__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__platform_key__ = __webpack_require__(23);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RangeKnob; });
 
 
@@ -65151,7 +65153,7 @@ function RangeKnob_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__item_item__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__util_dom__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__gestures_ui_event_manager__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__gestures_ui_event_manager__ = __webpack_require__(21);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Range; });
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -69627,7 +69629,7 @@ var /** @type {?} */ TOAST_POSITION_BOTTOM = 'bottom';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__util_base_input__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__item_item__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__platform_key__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__platform_key__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__toggle_gesture__ = __webpack_require__(223);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Toggle; });
@@ -73006,7 +73008,7 @@ var /** @type {?} */ CLEAR_STATE_DEFERS = 80;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_dom__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__gestures_pointer_events__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ripple__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__gestures_ui_event_manager__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__gestures_ui_event_manager__ = __webpack_require__(21);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TapClick; });
 /* unused harmony export isActivatable */
 /* harmony export (immutable) */ __webpack_exports__["a"] = setupTapClick;
@@ -74601,7 +74603,7 @@ webpackAsyncContext.id = 196;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_create_account_create_account__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(199);
@@ -74861,7 +74863,7 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(103);
@@ -74895,7 +74897,7 @@ var MyApp = (function () {
 MyApp = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/Users/rubenferreira/Desktop/Projects/biolivingMobile/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/rubenferreira/Desktop/Projects/biolivingMobile/src/app/app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map
@@ -102309,7 +102311,7 @@ function ClickBlock_tsickle_Closure_declarations() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__item_reorder_util__ = __webpack_require__(130);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_dom__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gestures_ui_event_manager__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gestures_ui_event_manager__ = __webpack_require__(21);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemReorderGesture; });
 
 
