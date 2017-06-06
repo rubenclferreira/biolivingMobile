@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams, AlertController,ModalController } 
 })
 export class EventDetailsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, AlertCtrl: AlertController, modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private AlertCtrl: AlertController, modalCtrl: ModalController) {
   }
   
 
@@ -23,7 +23,14 @@ export class EventDetailsPage {
     console.log('ionViewDidLoad EventDetailsPage');
   }
 
- 
+ doAlert(){
+    let alert = this.alertCtrl.create({
+    title: 'Low battery',
+    subTitle: '10% of battery remaining',
+    buttons: ['Dismiss']
+  });
+  alert.present();
+ }
 
  
 
