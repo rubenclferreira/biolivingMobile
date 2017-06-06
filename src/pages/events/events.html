@@ -1,0 +1,40 @@
+<!--
+  Generated template for the EventsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Eventos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page" padding>
+  <ion-list>
+    <ion-list-header>
+      Inscrito
+    </ion-list-header>
+    <ion-card (click)="eventDetailsIN()">
+      <img src="assets/garden.jpg" alt="garden">
+      <div class="card-title">Passeio Botânico</div>
+      
+    </ion-card>
+    <ion-list-header>
+      Eventos
+    </ion-list-header>
+    <ion-card (click)="eventDetailsOut()">
+      <img src="assets/charco.jpg" alt="charco">
+      <div class="card-title">Explorar charcos</div>
+    </ion-card>
+    <ion-card>
+      <img src="assets/ra.jpg" alt="ra">
+      <div class="card-title">Vida anfibia</div>
+    </ion-card>
+    
+
+  </ion-list>
+</ion-content>

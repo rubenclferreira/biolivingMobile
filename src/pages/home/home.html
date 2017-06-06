@@ -1,14 +1,15 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Bio Eventos
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<img src="assets/biolivingLogo.png" alt="biolivingLogo">
+  <button ion-button outline block (click)="onLoadEventsPage()">Login com Facebook</button>
+  <button ion-button class="greenBtn" outline block>Login com e-mail</button>
+  <button ion-button class="greenBtn" outline block (click)="onLoadCreateAccount()">Criar conta</button>
 </ion-content>
