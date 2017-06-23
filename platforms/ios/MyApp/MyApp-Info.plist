@@ -47,6 +47,8 @@
     </array>
     <key>UIRequiresFullScreen</key>
     <true/>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string/>
     <key>NSAppTransportSecurity</key>
     <dict>
       <key>NSExceptionDomains</key>
@@ -60,7 +62,5 @@
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string/>
   </dict>
 </plist>

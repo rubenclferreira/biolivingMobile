@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		UlLbI+FKmkExy6GAlathb8Z4idM=
+		CWvAUP7iIXKQ8FemiscgRIUwokE=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,11 +94,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		qvv/4UxwEtnDgd7DdnmVxTAB6jM=
+		cX98d/4t8NNC2Cu8NMQuRLL94zM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8uLFiIWRRvCZOgysTKqhpdAQDlE=
+		DUAiQKCD1PV1uuivOTw9J92rPJI=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		CvNUYVtFsi5LkmLkqpw95IexY3g=
+		AJCub6oZYRD4oMPSwo1pnhxxIqg=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		raOXaqjgT0HzdcKHkTQYyLvFgHo=
+		i3KvvBEbDUEI8KP+u3Ez3D90Q2I=
 		</data>
 		<key>www/assets/biolivingLogo.png</key>
 		<data>
@@ -290,7 +290,7 @@
 		</data>
 		<key>www/build/0.main.js</key>
 		<data>
-		I/oCa8nbdyHkSb4Gzbsr7tlhUms=
+		fs05FOJlRiHyaeB9+bJXdtBOvaQ=
 		</data>
 		<key>www/build/0.main.js.map</key>
 		<data>
@@ -298,7 +298,7 @@
 		</data>
 		<key>www/build/1.main.js</key>
 		<data>
-		3LqRXMIbU2Ml7abb7JuTvksPKHw=
+		5EV/CR6RwOY0lD5wd1tF0koLpos=
 		</data>
 		<key>www/build/1.main.js.map</key>
 		<data>
@@ -306,7 +306,7 @@
 		</data>
 		<key>www/build/2.main.js</key>
 		<data>
-		mYwUoKeb2uv8OzkJBWTuB8Tz1rU=
+		5AmimTxdYjt7F4TTzjjow41e3Ts=
 		</data>
 		<key>www/build/2.main.js.map</key>
 		<data>
@@ -314,7 +314,7 @@
 		</data>
 		<key>www/build/3.main.js</key>
 		<data>
-		JeqvmUkzSnAZGpDgl7YK+X9Fk2Y=
+		X2TKc6JlsTDolSeOqfZOcjc8twQ=
 		</data>
 		<key>www/build/3.main.js.map</key>
 		<data>
@@ -330,11 +330,11 @@
 		</data>
 		<key>www/build/main.js</key>
 		<data>
-		kpGXsHqA/iUyQxZ3oYqgYysZkjk=
+		ItlWMiGS5CERGDpixyEZA87jXT4=
 		</data>
 		<key>www/build/main.js.map</key>
 		<data>
-		ec8BMDTWXNthaM1nZhjXnYOWzPc=
+		w3HRw0+rLDIj9VjKGEBS/dAnaP4=
 		</data>
 		<key>www/build/polyfills.js</key>
 		<data>
@@ -358,7 +358,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		2dq56rMnGYK0NxKBQXzwMDc/qE4=
+		x4NAw4NspBw7Wsfx+UgjPde7/PI=
 		</data>
 		<key>www/index.html</key>
 		<data>
@@ -639,11 +639,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UlLbI+FKmkExy6GAlathb8Z4idM=
+			CWvAUP7iIXKQ8FemiscgRIUwokE=
 			</data>
 			<key>hash2</key>
 			<data>
-			I0RJmv4p1I3YueCYjwTzvwrevPVea5fTLERen1faZEM=
+			qWbFewqyXF5CBMmM2y1uXXVGW5NKbGbXoROEzRiGGx8=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -661,11 +661,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qvv/4UxwEtnDgd7DdnmVxTAB6jM=
+			cX98d/4t8NNC2Cu8NMQuRLL94zM=
 			</data>
 			<key>hash2</key>
 			<data>
-			tPx59rCBU8QF+SeEr+Kos9O32Kbojww5sH/kCoHHQR8=
+			yzjtg426Eu7HELd0HbOaNZbCJYJrXAEdBz25fGYnnBw=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -826,22 +826,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CvNUYVtFsi5LkmLkqpw95IexY3g=
+			AJCub6oZYRD4oMPSwo1pnhxxIqg=
 			</data>
 			<key>hash2</key>
 			<data>
-			REHFFmINjnRLCVL0ujUjlOpbE/6hVm38BxpE1wigjcw=
+			YIFyjXbBgaLYqF7C1PuPWex5ml2lr7xuwGOavdUsqrA=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			raOXaqjgT0HzdcKHkTQYyLvFgHo=
+			i3KvvBEbDUEI8KP+u3Ez3D90Q2I=
 			</data>
 			<key>hash2</key>
 			<data>
-			2d2h+Pgan1e4xZUNyjY6aMMn7zAtzE30bnCRfKZ+jeU=
+			Gg2IXKfwMikUNEybRa7XChkZxN7v38ywjOiz1wsGO+M=
 			</data>
 		</dict>
 		<key>www/assets/biolivingLogo.png</key>
@@ -1178,11 +1178,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			I/oCa8nbdyHkSb4Gzbsr7tlhUms=
+			fs05FOJlRiHyaeB9+bJXdtBOvaQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			eWWtFfQIO2em2hXhFoRNk8yTEXFQdcHuJigptpkBngc=
+			TlJtkFASo3tBI/zFhGfqed309TQ5F8MQQLQiwjoOt/w=
 			</data>
 		</dict>
 		<key>www/build/0.main.js.map</key>
@@ -1200,11 +1200,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3LqRXMIbU2Ml7abb7JuTvksPKHw=
+			5EV/CR6RwOY0lD5wd1tF0koLpos=
 			</data>
 			<key>hash2</key>
 			<data>
-			KIooecmY2e4/j0m7VwM/OvzQa9qZdTJBXevBiBYHq6E=
+			GPBoKqW3nzAxCRQe/glBUxTMf6ZGUAgk+cUOi4YSL/o=
 			</data>
 		</dict>
 		<key>www/build/1.main.js.map</key>
@@ -1222,11 +1222,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mYwUoKeb2uv8OzkJBWTuB8Tz1rU=
+			5AmimTxdYjt7F4TTzjjow41e3Ts=
 			</data>
 			<key>hash2</key>
 			<data>
-			FcZGME3tPVIm16Xt2XvDtTJdrcWMHWc5OzxykW1YCoY=
+			6UAoKYrHh0MxVrtKcEh56m3En8osnxIv2/L8DS7reU8=
 			</data>
 		</dict>
 		<key>www/build/2.main.js.map</key>
@@ -1244,11 +1244,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JeqvmUkzSnAZGpDgl7YK+X9Fk2Y=
+			X2TKc6JlsTDolSeOqfZOcjc8twQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			CWQWcNgbP4Yh4nZhBbDuOIXt4wwmgSWu5LCIUI6S9Mk=
+			nMpDGDtV6PSvYI7/CYL23718Y+kvxpge+tWTHBiJ/Kw=
 			</data>
 		</dict>
 		<key>www/build/3.main.js.map</key>
@@ -1288,22 +1288,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kpGXsHqA/iUyQxZ3oYqgYysZkjk=
+			ItlWMiGS5CERGDpixyEZA87jXT4=
 			</data>
 			<key>hash2</key>
 			<data>
-			94LdEbOTe72C+NWoStp2xAFRLTZc/OgZPD/15wCkvHk=
+			6prXXj6yaJqQ+Jxv/ITGkkyaKoquzJTzLgmoUUsnke0=
 			</data>
 		</dict>
 		<key>www/build/main.js.map</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ec8BMDTWXNthaM1nZhjXnYOWzPc=
+			w3HRw0+rLDIj9VjKGEBS/dAnaP4=
 			</data>
 			<key>hash2</key>
 			<data>
-			9LeN4wcykjUSBcKSDNvVrSid2UE2sHtvIIcRXORmGxI=
+			WVnfr81L7S6QhQA7eyUYclAEIy9GWS0eaATSAG4ecss=
 			</data>
 		</dict>
 		<key>www/build/polyfills.js</key>
@@ -1365,11 +1365,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2dq56rMnGYK0NxKBQXzwMDc/qE4=
+			x4NAw4NspBw7Wsfx+UgjPde7/PI=
 			</data>
 			<key>hash2</key>
 			<data>
-			11EByjajbMvHXs9OmuhRKKq/z0BGaz5pEBcm1FfD/fE=
+			R85Om4/Rnd7SrIghg9I4/MF5YMFHfxmKIipc4O9Ez5M=
 			</data>
 		</dict>
 		<key>www/index.html</key>

@@ -1,3 +1,4 @@
+import { LoginPage } from './../pages/login/login';
 import { EventDetailsOutPage } from './../pages/event-details-out/event-details-out';
 import { EventDetailsPage } from './../pages/event-details/event-details';
 import { EventsPage } from './../pages/events/events';
@@ -19,7 +20,8 @@ import { HomePage } from '../pages/home/home';
     CreateAccountPage,
     EventsPage,
     EventDetailsPage,
-    EventDetailsOutPage
+    EventDetailsOutPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { HomePage } from '../pages/home/home';
     CreateAccountPage,
     EventsPage,
     EventDetailsPage,
-    EventDetailsOutPage
+    EventDetailsOutPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

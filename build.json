@@ -1,0 +1,12 @@
+{
+    "ios":{
+        "debug":{
+            "developmentTeam": "Ruben Ferreira"
+
+        },
+        "release":{
+            "developmentTeam": "Ruben Ferreira"
+        }
+    }
+
+}
