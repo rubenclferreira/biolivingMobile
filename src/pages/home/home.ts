@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { EventsPage } from './../events/events';
 import { CreateAccountPage } from './../create-account/create-account';
 import { Component } from '@angular/core';
@@ -17,6 +18,10 @@ export class HomePage {
   }
   onLoadEventsPage(){
     this.navCtrl.push(EventsPage);
+  }
+
+  LoginPage(){
+    this.navCtrl.push(LoginPage);
   }
 
 }
