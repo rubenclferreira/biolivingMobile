@@ -14,5 +14,20 @@
 
 
 <ion-content padding>
+<ion-list>
+  <ion-item>
+    <ion-label fixed>E-mail</ion-label>
+    <ion-input type="email" value="email" name="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label fixed>Password</ion-label>
+    <ion-input type="password" value="password" name="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <div padding>
+    <button ion-button class="greenBtn" outline block  (click)="login()">Login</button>
+  </div>
+
+</ion-list>
 </ion-content>

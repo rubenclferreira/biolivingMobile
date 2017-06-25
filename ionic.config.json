@@ -1,5 +1,11 @@
 {
   "name": "biolivingMobile",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://localhost.192.168.1.104.xip.io:8888/public/api/login"
+    }
+  ]
 }

@@ -15,25 +15,27 @@
 
 <ion-content class="card-background-page" padding>
   <ion-list>
-    <ion-list-header>
+   <!-- <ion-list-header>
       Inscrito
     </ion-list-header>
     <ion-card (click)="eventDetailsIN()">
       <img src="assets/garden.jpg" alt="garden">
       <div class="card-title">Passeio Botânico</div>
       
-    </ion-card>
+    </ion-card>-->
     <ion-list-header>
       Eventos
     </ion-list-header>
-    <ion-card (click)="eventDetailsOut()">
-      <img src="assets/charco.jpg" alt="charco">
-      <div class="card-title">Explorar charcos</div>
+    <ion-card *ngFor="let item of singleArray" (click)="eventDetails(item.id_eventos)">
+      <!--<img src="assets/charco.jpg" alt="{{item.id_eventos}}">
+      <div class="card-title" >{{item.nome_evento}} </div>-->
+      <ion-item>
+        <h3>
+          {{item.nome_evento}}
+        </h3>
+        </ion-item>
     </ion-card>
-    <ion-card>
-      <img src="assets/ra.jpg" alt="ra">
-      <div class="card-title">Vida anfibia</div>
-    </ion-card>
+    
     
 
   </ion-list>

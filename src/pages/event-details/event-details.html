@@ -20,42 +20,56 @@
 <ion-list-header>
       Descrição
     </ion-list-header>
-    <ion-item text-wrap>
-      Agora que a Primavera fez florescer tantas plantas, venha conhecer a diversidade botânica da Pateira de Frossos, na companhia de uma botânica de renome. Qual o nome de cada planta? Quais se podem comer? Que propriedade medicinal têm? Deixe-se maravilhar pelo fascinante mundo das plantas.
+    <ion-item text-wrap *ngFor="let item of detailArray" >
+       {{item.descricao}}
     </ion-item>
       
 
   
    
 
-  <ion-list-header>
+  <!--<ion-list-header>
       Colaboradores
     </ion-list-header>
-     <ion-item>
-      <ion-avatar item-left>
-        <img src="assets/seuss.jpg" alt="">
+     <ion-item *ngFor="let item of detailArray"  >
+      <ion-avatar item-left >
+        <img src="" alt="">
       </ion-avatar>
       <h3>Dr. Rosa Pinho</h3>
       <p>Biologa universidade de Aveiro</p>
+    </ion-item>-->
+    <ion-list-header>
+      Minimo de participantes
+    </ion-list-header>
+    <ion-item *ngFor="let item of detailArray">
+      <h3>{{item.min_participantes}}</h3>
     </ion-item>
 
      <ion-list-header>
       Local
     </ion-list-header>
-    <ion-item>
-      <h3>Pateira de Frossos</h3>
+    
+    <ion-item *ngFor="let item of detailArray">
+      <h3>{{item.nome}}</h3>
     </ion-item>
 
     <ion-list-header>
-      Data/Hora
+      Data/Hora inicio
     </ion-list-header>
-      <ion-item>
-        <h3>Data:</h3><p>27-Maio-2017</p>
-        <h3>Hora:</h3><p>09:30 - 12:30</p>
+      <ion-item *ngFor="let item of detailArray">
+        <h3>{{item.data_evento}}</h3>
+        
+      </ion-item>
+      <ion-list-header>
+      Preço
+    </ion-list-header>
+      <ion-item *ngFor="let item of detailArray">
+        <h3>{{item.preco}}€</h3>
+        
       </ion-item>
 
     </ion-list>
 
-    <button ion-button class="greenBtn" outline block (click)="doAlert()" >Solicitar certificado de participação</button>
+    <button ion-button class="greenBtn" outline block (click)="getCert()" >Solicitar certificado de participação</button>
 
 </ion-content>

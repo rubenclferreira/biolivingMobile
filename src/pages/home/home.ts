@@ -3,14 +3,17 @@ import { EventsPage } from './../events/events';
 import { CreateAccountPage } from './../create-account/create-account';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  link = 'http://localhost:8888/public/api/me';
+  data:any
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,private http: Http) {
 
   }
   onLoadCreateAccount(){
@@ -22,6 +25,46 @@ export class HomePage {
 
   LoginPage(){
     this.navCtrl.push(LoginPage);
+  };
+
+  
+
+    ionViewDidLoad(){
+
+      return this.http
+                    .get(this.link)
+                    .map(res => res.json())
+                    .subscribe(
+                    data => {
+                      this.data = data;
+                      console.log(data.id);
+                      if(data.status == 200){
+                        this.navCtrl.push(EventsPage);
+                      }else{
+                        console.log("passou");
+                      }
+            },
+            
+                    err => {
+                      
+                      console.log("não passou");
+                    }
+                    );
+
+    }
+
+    
+                    
+
+                    
+                              
+
+
+
+
+
+
+
   }
 
-}
+
