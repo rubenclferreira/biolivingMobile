@@ -34,6 +34,11 @@
         },
         "cordova-plugin-http": {
             "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-geofence": {
+            "GEOFENCE_ALWAYS_USAGE_DESCRIPTION": "${EXECUTABLE_NAME} Would Like to Use Your Current Location Even In Background.",
+            "GEOFENCE_IN_USE_USAGE_DESCRIPTION": "${EXECUTABLE_NAME} Would Like to Use Your Current Location When In Use.",
+            "PACKAGE_NAME": "io.ionic.starter"
         }
     },
     "dependent_plugins": {
@@ -41,6 +46,12 @@
             "PACKAGE_NAME": "io.ionic.starter"
         },
         "cordova-plugin-file": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-add-swift-support": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "es6-promise-plugin": {
             "PACKAGE_NAME": "io.ionic.starter"
         }
     }

@@ -27465,6 +27465,30 @@ ion-navbar.toolbar {
   color: #fff;
 }
 
+.greenBtn:hover {
+  background-color: #b3c14e;
+  color: #fff;
+}
+
+.greenBtn:focus {
+  background-color: #b3c14e;
+  color: #fff;
+}
+
+.card {
+  border: 2px solid;
+  border-color: #b3c14e;
+}
+
+.logoutBtn {
+  margin-right: 20px;
+  background-color: transparent !important;
+}
+
+ion-icon {
+  font-size: 40px;
+}
+
 page-events .card-background-page .ion-card {
   position: relative;
   text-align: center;

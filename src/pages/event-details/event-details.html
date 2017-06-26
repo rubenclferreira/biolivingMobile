@@ -8,6 +8,11 @@
 
   <ion-navbar>
     <ion-title>Detalhes</ion-title>
+    <ion-buttons  end>
+        <button class="logoutBtn" (click)="logout()">
+          <ion-icon name="contact" class="logoutIcon" ></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -38,7 +43,7 @@
       <h3>Dr. Rosa Pinho</h3>
       <p>Biologa universidade de Aveiro</p>
     </ion-item>-->
-    <ion-list-header>
+    <ion-list-header >
       Minimo de participantes
     </ion-list-header>
     <ion-item *ngFor="let item of detailArray">
@@ -70,6 +75,6 @@
 
     </ion-list>
 
-    <button ion-button class="greenBtn" outline block (click)="getCert()" >Solicitar certificado de participação</button>
+    <button ion-button class="greenBtn" outline block (click)="alertCert()" >Solicitar certificado de participação</button>
 
 </ion-content>

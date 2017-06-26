@@ -6,8 +6,16 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar hideBackButton >
+    
     <ion-title>Eventos</ion-title>
+    <ion-buttons  end>
+        <button class="logoutBtn" (click)="logout()">
+          <ion-icon name="contact" class="logoutIcon" ></ion-icon>
+        </button>
+      
+    </ion-buttons>
+    
   </ion-navbar>
 
 </ion-header>
@@ -23,18 +31,28 @@
       <div class="card-title">Passeio Botânico</div>
       
     </ion-card>-->
-    <ion-list-header>
+   <ion-list-header>
       Eventos
     </ion-list-header>
-    <ion-card *ngFor="let item of singleArray" (click)="eventDetails(item.id_eventos)">
-      <!--<img src="assets/charco.jpg" alt="{{item.id_eventos}}">
+    <ion-card class="card" *ngFor="let item of singleArray" (click)="eventDetails(item.id_eventos)">
+     <!-- img src="assets/charco.jpg" alt="{{item.id_eventos}}">
       <div class="card-title" >{{item.nome_evento}} </div>-->
       <ion-item>
-        <h3>
+        <h3 center>
           {{item.nome_evento}}
         </h3>
         </ion-item>
     </ion-card>
+
+    <!--<ion-card>
+  <ion-card-header *ngFor="let item of singleArray" (click)="eventDetails(item.id_eventos)">
+    {{item.nome_evento}}
+    <ion-card-content >
+    {{item.descricao_short}}
+  </ion-card-content>
+  </ion-card-header>
+  
+</ion-card>-->
     
     
 

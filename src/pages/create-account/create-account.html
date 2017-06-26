@@ -16,17 +16,25 @@
 <ion-content padding>
 <ion-list>
   <ion-item>
-    <ion-label fixed>Nome de utilizador</ion-label>
-    <ion-input type="text" value=""></ion-input>
+    <ion-label fixed>Nome</ion-label>
+    <ion-input type="text" value="nome" [(ngModel)]="nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>Apelido</ion-label>
+    <ion-input type="text" value="apelido" [(ngModel)]="apelido"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>Email</ion-label>
+    <ion-input type="email" value="email" [(ngModel)]="email"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label fixed>Password</ion-label>
-    <ion-input type="password" value=""></ion-input>
+    <ion-input type="password" value="password" [(ngModel)]="password"></ion-input>
   </ion-item>
 
   <div padding>
-    <button ion-button class="greenBtn" outline block>Criar</button>
+    <button ion-button class="greenBtn" outline block (click)="createAccount()">Criar</button>
   </div>
 
 </ion-list>

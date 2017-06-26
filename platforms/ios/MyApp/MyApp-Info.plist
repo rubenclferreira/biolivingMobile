@@ -48,7 +48,7 @@
     <key>UIRequiresFullScreen</key>
     <true/>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string/>
+    <string>${EXECUTABLE_NAME} Would Like to Use Your Current Location When In Use.</string>
     <key>NSAppTransportSecurity</key>
     <dict>
       <key>NSExceptionDomains</key>
@@ -62,5 +62,11 @@
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>${EXECUTABLE_NAME} Would Like to Use Your Current Location Even In Background.</string>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>remote-notification</string>
+    </array>
   </dict>
 </plist>

@@ -112,4 +112,7 @@
     <feature name="CordovaHttpPlugin">
         <param name="ios-package" value="CordovaHttpPlugin" />
     </feature>
+    <feature name="GeofencePlugin">
+        <param name="ios-package" value="HWPGeofencePlugin" />
+    </feature>
 </widget>

@@ -10,7 +10,7 @@ import { Http } from '@angular/http';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  link = 'http://localhost:8888/public/api/me';
+  //link = 'http://localhost:8888/public/api/me';
   data:any
 
   constructor(public navCtrl: NavController,private http: Http) {
@@ -31,14 +31,14 @@ export class HomePage {
 
     ionViewDidLoad(){
 
-      return this.http
+      /*return this.http
                     .get(this.link)
                     .map(res => res.json())
                     .subscribe(
                     data => {
                       this.data = data;
                       console.log(data.id);
-                      if(data.status == 200){
+                      if(data.id == !null){
                         this.navCtrl.push(EventsPage);
                       }else{
                         console.log("passou");
@@ -46,10 +46,10 @@ export class HomePage {
             },
             
                     err => {
-                      
+                      console.log(this.data)
                       console.log("não passou");
                     }
-                    );
+                    );*/
 
     }
 

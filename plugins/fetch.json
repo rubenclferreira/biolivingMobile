@@ -88,5 +88,32 @@
         },
         "is_top_level": false,
         "variables": {}
+    },
+    "cordova-plugin-geofence": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-geofence"
+        },
+        "is_top_level": true,
+        "variables": {
+            "GEOFENCE_ALWAYS_USAGE_DESCRIPTION": "${EXECUTABLE_NAME} Would Like to Use Your Current Location Even In Background.",
+            "GEOFENCE_IN_USE_USAGE_DESCRIPTION": "${EXECUTABLE_NAME} Would Like to Use Your Current Location When In Use."
+        }
+    },
+    "cordova-plugin-add-swift-support": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-add-swift-support@1.6.0"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "es6-promise-plugin": {
+        "source": {
+            "type": "registry",
+            "id": "es6-promise-plugin"
+        },
+        "is_top_level": false,
+        "variables": {}
     }
 }

@@ -1,9 +1,7 @@
 import { EventsPage } from './../events/events';
-
-import { HTTP } from '@ionic-native/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Http, Headers, URLSearchParams, Request, RequestMethod, RequestOptions } from '@angular/http';
+import { Http } from '@angular/http';
 import { AlertController } from 'ionic-angular';     
 
 
@@ -34,7 +32,7 @@ export class LoginPage {
   
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+   // console.log('ionViewDidLoad LoginPage');
   };
 
 
@@ -77,18 +75,18 @@ export class LoginPage {
                     .map(res => res.json())
                     .subscribe(
                     data => {
-                      console.log(data);
-                      console.log(data.info)
+                     // console.log(data);
+                      //console.log(data.info)
                       this.navCtrl.push(EventsPage)
             },
                     err => {
                       let alert = this.AlertCtrl.create({
     title: "info",
-    subTitle: 'O e-mail ou a password estão errados',
+    subTitle: 'Um ou ambos os campos errados',
     buttons: ['OK']
   });
   alert.present();
-                      console.log("ERROR!: ", err);
+                      //console.log("ERROR!: ", err);
                     }
                     );
                     

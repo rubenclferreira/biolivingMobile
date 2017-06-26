@@ -30,6 +30,11 @@
 		C8F97DEBBB494CCDADE6F496 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F742E6208D496F9CD05A22 /* AFURLSessionManager.m */; };
 		3B81305A4FFB4AB8B4C279C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39620A9C462546CC82127C83 /* Security.framework */; };
 		C185A66676984F0B8658EDA6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C8F31972D7427F958EFEF5 /* SystemConfiguration.framework */; };
+		054C42DF382B4A408BC73E34 /* GeofencePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFAF60206FC4AE6BF166F7B /* GeofencePlugin.swift */; };
+		FDB96ED3F39F4D2BBE8046A9 /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53A7B33CF94CDCB41437A1 /* SwiftData.swift */; };
+		D12B549C931649078A0CFCD8 /* SwiftyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A923B11FB3C42ECB3003B67 /* SwiftyJson.swift */; };
+		C6A23B9A1DF94CD48E152675 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A77CB09198124BE4A8C785D1 /* libsqlite3.dylib */; };
+		7301CC2E72B44388B61D6C16 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C49C67175E4344D29DB4E787 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +102,12 @@
 		A1515BCD2C4C4BD7839B78D3 /* AFURLSessionManager.h */ = {isa = PBXFileReference; name = "AFURLSessionManager.h"; path = "cordova-plugin-http/AFURLSessionManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		39620A9C462546CC82127C83 /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		D3C8F31972D7427F958EFEF5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		7EFAF60206FC4AE6BF166F7B /* GeofencePlugin.swift */ = {isa = PBXFileReference; name = "GeofencePlugin.swift"; path = "cordova-plugin-geofence/GeofencePlugin.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		8C53A7B33CF94CDCB41437A1 /* SwiftData.swift */ = {isa = PBXFileReference; name = "SwiftData.swift"; path = "cordova-plugin-geofence/SwiftData.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		5A923B11FB3C42ECB3003B67 /* SwiftyJson.swift */ = {isa = PBXFileReference; name = "SwiftyJson.swift"; path = "cordova-plugin-geofence/SwiftyJson.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		3E1ABCA8D5DA406D9D147EA5 /* Geofence-Plugin-Bridging-Header.h */ = {isa = PBXFileReference; name = "Geofence-Plugin-Bridging-Header.h"; path = "cordova-plugin-geofence/Geofence-Plugin-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		A77CB09198124BE4A8C785D1 /* libsqlite3.dylib */ = {isa = PBXFileReference; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		C49C67175E4344D29DB4E787 /* WebKit.framework */ = {isa = PBXFileReference; name = "WebKit.framework"; path = "System/Library/Frameworks/WebKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +118,8 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				3B81305A4FFB4AB8B4C279C5 /* Security.framework in Frameworks */,
 				C185A66676984F0B8658EDA6 /* SystemConfiguration.framework in Frameworks */,
+				C6A23B9A1DF94CD48E152675 /* libsqlite3.dylib in Frameworks */,
+				7301CC2E72B44388B61D6C16 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +192,8 @@
 			children = (
 				39620A9C462546CC82127C83 /* Security.framework */,
 				D3C8F31972D7427F958EFEF5 /* SystemConfiguration.framework */,
+				A77CB09198124BE4A8C785D1 /* libsqlite3.dylib */,
+				C49C67175E4344D29DB4E787 /* WebKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -229,6 +244,10 @@
 				CB362DA32D68423B86C6EF50 /* AFURLRequestSerialization.h */,
 				2889BB0A22DB46518144F5D2 /* AFURLResponseSerialization.h */,
 				A1515BCD2C4C4BD7839B78D3 /* AFURLSessionManager.h */,
+				7EFAF60206FC4AE6BF166F7B /* GeofencePlugin.swift */,
+				8C53A7B33CF94CDCB41437A1 /* SwiftData.swift */,
+				5A923B11FB3C42ECB3003B67 /* SwiftyJson.swift */,
+				3E1ABCA8D5DA406D9D147EA5 /* Geofence-Plugin-Bridging-Header.h */,
 			);
 			name = Plugins;
 			path = "MyApp/Plugins";
@@ -353,6 +372,9 @@
 				B01BF50C1C8D49EA8911F2ED /* AFURLRequestSerialization.m in Sources */,
 				B961F40904B34A658F54CA03 /* AFURLResponseSerialization.m in Sources */,
 				C8F97DEBBB494CCDADE6F496 /* AFURLSessionManager.m in Sources */,
+				054C42DF382B4A408BC73E34 /* GeofencePlugin.swift in Sources */,
+				FDB96ED3F39F4D2BBE8046A9 /* SwiftData.swift in Sources */,
+				D12B549C931649078A0CFCD8 /* SwiftyJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +410,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				PRODUCT_NAME = "MyApp";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -410,6 +436,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				PRODUCT_NAME = "MyApp";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -437,6 +466,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -463,6 +496,9 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

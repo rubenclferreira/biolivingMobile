@@ -1,12 +1,10 @@
 import { HomePage } from './../home/home';
-import { LoginPage } from './../login/login';
-import { EventDetailsOutPage } from './../event-details-out/event-details-out';
 import { EventDetailsPage } from './../event-details/event-details';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Http, Headers, URLSearchParams, Request, RequestMethod, RequestOptions } from '@angular/http';
+import { Http } from '@angular/http';
 import { AlertController } from 'ionic-angular';
-import { HTTP } from '@ionic-native/http';
+
 
 /**
  * Generated class for the EventsPage page.
@@ -31,28 +29,24 @@ export class EventsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EventsPage');
+    //console.log('ionViewDidLoad EventsPage');
     var link = 'http://localhost:8888/public/api/pesquisa/eventos';
 
     
-
+    // Call a API o retrieve da informação e envia a informação para um array de objectos para ser possivel correr com o ngFor
     return this.http
                     .get(link)
                     .map(res => res.json())
                     .subscribe(
                     data => {
-                      console.log(data);
-                      
-                      
-                      
-                      
-                      
+                      //console.log(data);
+ 
                       for(var i = 0; i < data.data.length; i++){
                         
                         this.singleArray.push(data.data[i]);
 
                       }
-                      console.log(this.singleArray);
+                      //console.log(this.singleArray);
                       
                       /*
                       console.log(data);
@@ -60,9 +54,6 @@ export class EventsPage {
                       
                       console.log(data.info);
                       console.log(datas);*/
-                      
-                      
-                      
             },
             
                     err => {
@@ -72,29 +63,41 @@ export class EventsPage {
                         buttons: ['OK']
                       });
                       alert.present();
-                      console.log("ERROR!: ", err);
+                      //console.log("ERROR!: ", err);
                       this.navCtrl.push(HomePage);
                     }
                     );
-                    
-
-                    
-                            
-
-
-
-
-
-
 
   }
   eventDetails(id: string){
     this.navCtrl.push(EventDetailsPage, {id: id});
     this.id = id;
-    console.log(id);
+    //console.log(id);
   }
-  eventDetailsOut(){
-    this.navCtrl.push(EventDetailsOutPage);
+
+  logout(){
+    let alert = this.AlertCtrl.create({
+    title: 'Logout',
+    message: 'Pretende fazer Logout?',
+    buttons: [
+      {
+        text: 'Cancelar',
+        role: 'cancel',
+        handler: () => {
+          //console.log('Cancelar clicado');
+        }
+      },
+      {
+        text: 'Sim',
+        handler: () => {
+          this.navCtrl.popToRoot(HomePage);
+          //console.log('Sair clicado');
+        }
+      }
+    ]
+  });
+  alert.present();
+
   }
 
 
